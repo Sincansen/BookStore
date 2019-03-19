@@ -5,4 +5,66 @@ block meta
   meta(name='description', content='')
 
 block content
-  h1 Заголовок
+  .promo__inner
+    .slider__container
+      .slider__btn-prev
+      .slider__wrapper
+        .slider__slider
+          .slider__slider-text
+            p.slider-title Новое поступление книги "Симпсоны и их математические секреты
+            .slider__descr
+              h2.slider__descr-text Для поклонников сериала "Симпсоны" и для всех, кому интересна математика.
+              a.slider__descr-link(href="/") Хочу узнать о книге больше
+          .slider__slider-picture
+      .slider__btn-next
+
+  //-  for (var i = 0; i <10: i++) {
+
+      }
+  .tabs
+    ul.tabs__block
+      li.tabs__item
+        a(href='/') Все
+      li.tabs__item
+        a(href='/') Маркетинг
+      li.tabs__item
+        a(href='/') Научпоп
+      li.tabs__item
+        a(href='/') Бизнес
+      li.tabs__item
+        a(href='/') Творчество
+      li.tabs__item
+        a(href='/') Бизнес
+  .catalog
+    .catalog__block
+      +mini-card('Латеральная логика', 'book.html', 'img/lat-logic.jpg', 'Головоломный путь к нестандартному мышлению', '500 Р')
+    .pagination
+      p Тут запланирована пагинация
+
+  .delivery
+    h2.delivery__title Доставим в любое место
+    p.delivery__descr // Ну почти в любое
+    ul.delivery__block
+        li.delivery__item
+          img.delivery__image
+          p.delivery__item-text Покупайте книги на сайте в любимом формате - бумажные, электронные или аудио.
+        li.delivery__item
+          img.delivery__image
+          p.delivery__item-text Мы подарим вам "Набор читателя" и добавим в посылку.
+        li.delivery__item
+          img.delivery__image
+          p.delivery__item-text Бесплатно доставляем заказы от 3000 рублей по всей России.
+        li.delivery__item
+          img.delivery__image
+          p.delivery__item-text Доставка в более чем 300 городов России, по Москве и Санкт-Петербургу бесплатно
+
+  .newl
+    h2.newl__title Наши новинки
+    a.newl__link(href='/')  Все новинки
+    .newl__block
+      +mini-card('Латеральная логика', 'book.html', 'img/lat-logic.jpg', 'Головоломный путь к нестандартному мышлению')
+
+
+
+
+

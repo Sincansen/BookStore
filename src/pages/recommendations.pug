@@ -5,5 +5,39 @@ block meta
   meta(name='description', content='')
 
 block content
-  h1 Заголовок
+  .recommend
+    h2.recommend__header Наши рекомендации
+    .recommend__blog
+      h3.blog__title Новая статья в блоге
+      p.blog__descr Посмотрите, как чтение книг меняет восприятие человека.
+      a.blog__link Читать статью
+
+    .recommend__book
+      h3.book__title Книга осени!
+      p.book__descr Проголосуй за лучшую книгу этой осени
+
+    .recommend__photo
+      h3.book__title Наши подборки ваших лучших фотографий у нас
+
+    .recommend__opinion
+      h3.opinion__title Нам важно ваше мнение!
+      p.opinion__descr Ставьте пальцы вверх , мы  хотим знать ваше мнение
+      input(type='submit', value='Проголосовать')
+
+    .recommend__kids
+      h3.kids__title Книги для детей
+      p.kids__descr У нас появился новый раздел, в котором мы подбираем книги для юных читателей
+
+    .recommend__oldbook
+      h3.oldbook__title У вас еть старые книги?
+      p.oldbook__descr Приносите их нам и обменяйте на новые.
+
+    .recommend__present
+      h3.present__title Книга в подарок!
+      p.present__descr При вашем новом заказе мы подарим вам книгу
+      +mini-card('Путеводитель по лжи', 'book.html', 'img/putevoditel.jpg', 'Критическое мышление в эпоху постправды')
+
+  .banner
+    h3.banner__header Мы открыли для вас уютную библиотеку
+    p.banner__descr Приходите к нам по адресу Никитская 10, каждый день с 10:00 до 18:00
 

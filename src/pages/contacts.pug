@@ -5,4 +5,21 @@ block meta
   meta(name='description', content='')
 
 block content
-  h1 Заголовок
+  h2.contacts__title Контакты
+  ul.contacts__block
+      li.contacts__item Набережная реки Фонтанки, 202
+      li.contacts__item с 9:00 до 19:00 ежедневно
+      li.contacts__item +7(911) 123 45 67
+  .map__block
+  .form__block
+    h2.form__title Есть вопросы?
+    p.form__descr Напишите нам на почту. Отвечаем в течение дня.
+    form.form__general
+      input.form__input(type='text', placeholder='Ваша почта', required)
+      input.form__input(type='text', placeholder='Сообщение', required)
+      input.form__button(type='submit', value='Отправить')
+      input(type='checkbox')
+      p.form__checkbox-text Я согласен(-на) с политикой конфиденциальности и правилами обработки данных
+  .banner__block
+      h2.banner__text Мы открыли для вас уютную библиотеку
+      p.banner__descr Приходите к нам по адресу Никитская 10, каждый день с 10:00 до 18:00

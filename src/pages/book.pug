@@ -5,4 +5,48 @@ block meta
   meta(name='description', content='')
 
 block content
-  h1 Заголовок
+  .book
+    .preview
+      img.preview__screen
+      img.preview__screen
+      img.preview__screen
+    .book__block
+      .book__img
+        img.book__img-cover
+      .book__description
+        p.book__description-author Эдди Юн
+        h2.book__description-name Суперпртребители
+        p.book__description-preview Кто это и почему они так важны для вашего бизнеса
+        .book__info
+          p.book__info-left Артикул
+          p.book__info-right 1090763
+          p.book__info-left В наличии
+          p.book__info-right 5 шт
+          p.book__info-left Издательство
+          p.book__info-right Издал
+          p.book__info-left Цена
+          p.book__info-right 800 Р
+        .book__block-button
+          button.book__button(type='submit', value='Добавить в корзину')
+          input.book__input(type='text')
+          p.book__input-text шт.
+        .book__like-block
+          img.book__like-symbol
+          p.book-like-text 20 людям понравилась эта книга
+      .book__full-description
+        h2.book__full-desc-title Короткое описание
+        p.book__full-desc-text В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах.
+        a.book__full-desc-link(href="index.html") Показать полностью
+      .book__likes-block
+        p Тут будут лайки
+    .more-books__block
+      h2.more-books-title Книги по тематике
+      a.more-books-link(href="index.html") Больше книг по теме
+      .more-books__card
+        +mini-card('Латеральная логика', 'book.html', 'img/lat-logic.jpg', 'Головоломный путь к нестандартному мышлению')
+    .banner__block
+      h2.banner__text Мы открыли для вас уютную библиотеку
+      p.banner__descr Приходите к нам по адресу Никитская 10, каждый день с 10:00 до 18:00
+
+
+

@@ -1,1 +1,12 @@
 //- Примеси
+
+mixin mini-card(name, url, imgUrl, descr, price)
+  article.mini-card
+    a.mini-card__inner(href=url)
+      img.mini-card__pict(src=imgUrl, alt=name)
+      h3.mini-card__title= name
+      if descr
+        p.mini-card__descr= descr
+      if price
+        p.mini-card__price= price
+
