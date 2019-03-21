@@ -5,12 +5,12 @@ block meta
   meta(name='description', content='')
 
 block content
-  .book
+  .book-block
     .preview
       img.preview__screen
       img.preview__screen
       img.preview__screen
-    .book__block
+    .book
       .book__img
         img.book__img-cover
       .book__description
@@ -26,25 +26,25 @@ block content
           p.book__info-right Издал
           p.book__info-left Цена
           p.book__info-right 800 Р
-        .book__block-button
-          button.book__button(type='submit', value='Добавить в корзину')
-          input.book__input(type='text')
-          p.book__input-text шт.
-        .book__like-block
+        .book__button
+          button.book__button-submit(type='submit', value='Добавить в корзину')
+          input.book__button-input(type='text')
+          p.book__button-input-text шт.
+        .book__like
           img.book__like-symbol
           p.book-like-text 20 людям понравилась эта книга
-      .book__full-description
+      .book__full-desc
         h2.book__full-desc-title Короткое описание
         p.book__full-desc-text В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах.
         a.book__full-desc-link(href="index.html") Показать полностью
-      .book__likes-block
+      .book__like
         p Тут будут лайки
-    .more-books__block
+    .more-books
       h2.more-books-title Книги по тематике
       a.more-books-link(href="index.html") Больше книг по теме
       .more-books__card
         +mini-card('Латеральная логика', 'book.html', 'img/lat-logic.jpg', 'Головоломный путь к нестандартному мышлению')
-    .banner__block
+    .banner
       h2.banner__text Мы открыли для вас уютную библиотеку
       p.banner__descr Приходите к нам по адресу Никитская 10, каждый день с 10:00 до 18:00
 
