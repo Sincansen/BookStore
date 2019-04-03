@@ -5,6 +5,8 @@ const dir =  {
   build: './build/',
 };
 
+const ghPages = require('gh-pages');
+const path = require('path');
 const { series, parallel, src, dest, watch } = require('gulp');
 const plumber = require('gulp-plumber');
 const sass = require('gulp-sass');
@@ -18,7 +20,40 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const pug = require('gulp-pug');
 const prettyHtml = require('gulp-pretty-html');
+const responsive = require('gulp-responsive');
 const replace = require('gulp-replace');
+
+function imagesConvert() {
+  return gulp.src('src/*.{png,jpg}')
+    .pipe(responsive({
+      'background-*.jpg': {
+        width: 700,
+        quality: 50
+      },
+      'cover.png': {
+        width: '50%',
+        // convert to jpeg format
+        format: 'jpeg',
+        rename: 'cover.jpg'
+      },
+      // produce multiple images from one source
+      'logo.png': [
+        {
+          width: 200
+        },{
+          width: 200 * 2,
+          rename: 'logo@2x.png'
+        }
+      ]
+    }))
+    .pipe(dest('dist'));
+}
+exports.imagesConvert = imagesConvert;
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
 
 function compilePug() {
   return src(dir.src + 'pages/**/*.pug')
