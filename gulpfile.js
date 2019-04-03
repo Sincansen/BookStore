@@ -23,33 +23,6 @@ const prettyHtml = require('gulp-pretty-html');
 const responsive = require('gulp-responsive');
 const replace = require('gulp-replace');
 
-function imagesConvert() {
-  return gulp.src('src/*.{png,jpg}')
-    .pipe(responsive({
-      'background-*.jpg': {
-        width: 700,
-        quality: 50
-      },
-      'cover.png': {
-        width: '50%',
-        // convert to jpeg format
-        format: 'jpeg',
-        rename: 'cover.jpg'
-      },
-      // produce multiple images from one source
-      'logo.png': [
-        {
-          width: 200
-        },{
-          width: 200 * 2,
-          rename: 'logo@2x.png'
-        }
-      ]
-    }))
-    .pipe(dest('dist'));
-}
-exports.imagesConvert = imagesConvert;
-
 function deploy(cb) {
   ghPages.publish(path.join(process.cwd(), './build'), cb);
 }
