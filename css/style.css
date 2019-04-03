@@ -1,0 +1,11 @@
+.page {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; }
+
+.mini-card {
+  width: 25%; }
+  .mini-card__inner {
+    text-decoration: none; }
+  .mini-card__price {
+    font-weight: 700; }
+
+/*# sourceMappingURL=style.css.map */
